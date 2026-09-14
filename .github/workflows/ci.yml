@@ -1,0 +1,28 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -e '.[api,gemini,dev]'
+      - run: ruff check src tests examples
+      - run: pytest -q
+      - run: python -m build
+      - run: pip install --force-reinstall --no-deps dist/*.whl
+      - run: cd /tmp && ekonte --help
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t ekonte-api .
+      - run: docker run --rm ekonte-api ekonte --help

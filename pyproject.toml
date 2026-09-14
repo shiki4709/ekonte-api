@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ekonte-api"
+version = "0.1.0"
+description = "Video structure you can build on: timed beats, narration budgets, and reusable storyboards."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "shiki4709"}]
+dependencies = ["pydantic>=2.10,<3"]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+gemini = ["google-genai>=1.0,<2"]
+scenes = ["scenedetect>=0.6.4,<0.7", "opencv-python-headless>=4.9,<5"]
+download = ["yt-dlp>=2026.7.4"]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.11", "build>=1.2"]
+
+[project.scripts]
+ekonte = "ekonte.cli:main"
+
+[project.urls]
+Repository = "https://github.com/shiki4709/ekonte-api"
+Issues = "https://github.com/shiki4709/ekonte-api/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ekonte"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,168 @@
+{
+  "$defs": {
+    "PlanBeat": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minimum": 0,
+          "title": "Id",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "number"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "number"
+        },
+        "shot": {
+          "title": "Shot",
+          "type": "string"
+        },
+        "angle": {
+          "title": "Angle",
+          "type": "string"
+        },
+        "function": {
+          "title": "Function",
+          "type": "string"
+        },
+        "action": {
+          "maxLength": 4000,
+          "title": "Action",
+          "type": "string"
+        },
+        "line": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overlay"
+        },
+        "sound": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sound"
+        }
+      },
+      "required": [
+        "id",
+        "start",
+        "end",
+        "shot",
+        "angle",
+        "function",
+        "action"
+      ],
+      "title": "PlanBeat",
+      "type": "object"
+    },
+    "Violation": {
+      "additionalProperties": false,
+      "properties": {
+        "beat_id": {
+          "title": "Beat Id",
+          "type": "integer"
+        },
+        "code": {
+          "enum": [
+            "word_budget",
+            "silent_beat",
+            "missing_beat",
+            "unexpected_beat",
+            "structure"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "actual_words": {
+          "default": 0,
+          "title": "Actual Words",
+          "type": "integer"
+        },
+        "max_words": {
+          "default": 0,
+          "title": "Max Words",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "beat_id",
+        "code"
+      ],
+      "title": "Violation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "creator_mode": {
+      "title": "Creator Mode",
+      "type": "string"
+    },
+    "beats": {
+      "items": {
+        "$ref": "#/$defs/PlanBeat"
+      },
+      "title": "Beats",
+      "type": "array"
+    },
+    "violations": {
+      "items": {
+        "$ref": "#/$defs/Violation"
+      },
+      "title": "Violations",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "creator_mode",
+    "beats",
+    "violations"
+  ],
+  "title": "Storyboard",
+  "type": "object"
+}

@@ -1,0 +1,207 @@
+{
+  "$defs": {
+    "Beat": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minimum": 0,
+          "title": "Id",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "number"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "number"
+        },
+        "shot": {
+          "default": "UNKNOWN",
+          "title": "Shot",
+          "type": "string"
+        },
+        "angle": {
+          "default": "UNKNOWN",
+          "title": "Angle",
+          "type": "string"
+        },
+        "function": {
+          "default": "UNKNOWN",
+          "title": "Function",
+          "type": "string"
+        },
+        "rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rationale"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overlay"
+        },
+        "spoken": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Spoken"
+        },
+        "max_words": {
+          "minimum": 0,
+          "title": "Max Words",
+          "type": "integer"
+        },
+        "label_source": {
+          "default": "unavailable",
+          "enum": [
+            "model",
+            "unavailable"
+          ],
+          "title": "Label Source",
+          "type": "string"
+        },
+        "keyframe_base64": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Keyframe Base64"
+        }
+      },
+      "required": [
+        "id",
+        "start",
+        "end",
+        "max_words"
+      ],
+      "title": "Beat",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "duration": {
+      "exclusiveMinimum": 0,
+      "maximum": 180,
+      "title": "Duration",
+      "type": "number"
+    },
+    "segmentation": {
+      "enum": [
+        "cuts",
+        "visual",
+        "sentences"
+      ],
+      "title": "Segmentation",
+      "type": "string"
+    },
+    "engine": {
+      "enum": [
+        "sensory",
+        "spectacle",
+        "explainer",
+        "talking",
+        "story",
+        "unknown"
+      ],
+      "title": "Engine",
+      "type": "string"
+    },
+    "engine_signals": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "title": "Engine Signals",
+      "type": "object"
+    },
+    "transcript_source": {
+      "enum": [
+        "provided",
+        "model",
+        "unavailable",
+        "no_audio"
+      ],
+      "title": "Transcript Source",
+      "type": "string"
+    },
+    "alignment": {
+      "enum": [
+        "interpolated",
+        "none"
+      ],
+      "title": "Alignment",
+      "type": "string"
+    },
+    "beats": {
+      "items": {
+        "$ref": "#/$defs/Beat"
+      },
+      "maxItems": 60,
+      "minItems": 1,
+      "title": "Beats",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "duration",
+    "segmentation",
+    "engine",
+    "engine_signals",
+    "transcript_source",
+    "alignment",
+    "beats"
+  ],
+  "title": "Analysis",
+  "type": "object"
+}

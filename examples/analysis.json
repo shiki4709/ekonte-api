@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "duration": 9.0,
+  "segmentation": "cuts",
+  "engine": "sensory",
+  "engine_signals": {
+    "coverage": 0,
+    "mean_scene": 3,
+    "n_scenes": 3,
+    "dur": 9,
+    "mode": "cuts",
+    "text_frac": 0,
+    "setup_frac": 0
+  },
+  "transcript_source": "no_audio",
+  "alignment": "none",
+  "beats": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "shot": "UNKNOWN",
+      "angle": "UNKNOWN",
+      "function": "UNKNOWN",
+      "rationale": null,
+      "overlay": null,
+      "spoken": null,
+      "max_words": 6,
+      "label_source": "unavailable",
+      "keyframe_base64": null
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 6.0,
+      "shot": "UNKNOWN",
+      "angle": "UNKNOWN",
+      "function": "UNKNOWN",
+      "rationale": null,
+      "overlay": null,
+      "spoken": null,
+      "max_words": 0,
+      "label_source": "unavailable",
+      "keyframe_base64": null
+    },
+    {
+      "id": 2,
+      "start": 6.0,
+      "end": 9.0,
+      "shot": "UNKNOWN",
+      "angle": "UNKNOWN",
+      "function": "UNKNOWN",
+      "rationale": null,
+      "overlay": null,
+      "spoken": null,
+      "max_words": 6,
+      "label_source": "unavailable",
+      "keyframe_base64": null
+    }
+  ],
+  "warnings": [
+    "Synthetic example; no model labels."
+  ]
+}
