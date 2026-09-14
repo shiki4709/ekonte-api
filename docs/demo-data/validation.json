@@ -1,0 +1,14 @@
+{
+  "intentional_mutation": {
+    "beat_id": 1,
+    "line": "This beat should stay silent."
+  },
+  "violations": [
+    {
+      "beat_id": 1,
+      "code": "silent_beat",
+      "actual_words": 5,
+      "max_words": 0
+    }
+  ]
+}

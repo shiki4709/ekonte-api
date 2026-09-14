@@ -1,13 +1,34 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/ekonte-lockup-dark.svg">
+    <img src="docs/assets/ekonte-lockup.svg" alt="Ekonte" width="240">
+  </picture>
+</p>
+
 # Ekonte API · 絵コンテ
+
+**English** · [日本語](docs/i18n/README.ja.md) · [简体中文](docs/i18n/README.zh-CN.md)
 
 **Turn a reference video into reusable structure. Write a new production plan to the same beat.**
 
 [![Tests](https://github.com/shiki4709/ekonte-api/actions/workflows/ci.yml/badge.svg)](https://github.com/shiki4709/ekonte-api/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/shiki4709/ekonte-api?include_prereleases)](https://github.com/shiki4709/ekonte-api/releases)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Ekonte extracts timed beats from short-form video, aligns speech to those beats, and attaches shot labels and narration budgets. Save that JSON once, then generate different storyboards without processing the reference again.
 
 Built for developers making creative research tools, video editors, and production workflows. Extracted from the Ekonte storyboard app. **v0.1 is an experimental developer release.**
+
+[Demo](#demo) · [Quick start](#quick-start) · [Python](#analyze-once-generate-twice) · [HTTP API](#http-api) · [Comparison](#how-it-differs-from-related-projects) · [Contributing](CONTRIBUTING.md)
+
+## Demo
+
+[![Animated walkthrough: a reference video becomes four timed beats with narration budgets](docs/assets/demo-preview.gif)](https://github.com/shiki4709/ekonte-api/blob/main/docs/assets/ekonte-demo.mp4)
+
+**[Watch the full 36-second demo](https://github.com/shiki4709/ekonte-api/blob/main/docs/assets/ekonte-demo.mp4)** · [Static preview](docs/assets/demo-poster.png) · [Captions and transcript](docs/demo.md#captions-and-transcript) · [Inspect the real outputs](docs/demo-data)
+
+An original 12-second motion study becomes four timed beats. The same analysis feeds two new briefs, while a deterministic check catches speech added to a silent beat. This is an edited visualization of real API output, not a real-time screen recording. No audio; English on-screen explanations and English, Japanese, and Chinese caption files are included.
 
 ```text
 reference.mp4 → analyze → Analysis JSON ─┬→ brief A → storyboard A
@@ -26,7 +47,7 @@ reference.mp4 → analyze → Analysis JSON ─┬→ brief A → storyboard A
 
 This is a production-planning tool. It does not render finished videos or predict virality.
 
-## Try it without an API key
+## Quick start
 
 Python 3.11+ and FFmpeg/ffprobe are required for video analysis.
 
@@ -145,3 +166,19 @@ python -m build
 ```
 
 Tests use synthetic video and fake providers: no credentials or paid services required. See [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed; FFmpeg, optional dependencies, and source media retain their own licenses.
+
+## Documentation and community
+
+- [Demo, captions, and reproduction](docs/demo.md)
+- [Schema and evidence guide](docs/schema.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Contributing and translation updates](CONTRIBUTING.md)
+- [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md)
+- [Report a bug](https://github.com/shiki4709/ekonte-api/issues/new?template=bug_report.yml) · [Request a feature](https://github.com/shiki4709/ekonte-api/issues/new?template=feature_request.yml)
+- [Security policy](SECURITY.md) · [Community guidelines](CODE_OF_CONDUCT.md)
+
+Documentation translations do not imply validated multilingual narration budgets. English is the canonical reference; translations identify their source version. Contributions improving language-aware pacing are welcome.
+
+## Acknowledgments
+
+Ekonte builds on FFmpeg and optionally PySceneDetect and yt-dlp. Gemini is the bundled model provider. Demo typography uses Space Grotesk and JetBrains Mono under the SIL Open Font License. See [asset credits](docs/assets/README.md) and [related projects](docs/comparison.md).

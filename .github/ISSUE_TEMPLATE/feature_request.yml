@@ -1,0 +1,22 @@
+name: Feature request
+description: Describe a workflow Ekonte could support better.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What are you trying to do?
+      description: "Describe the task, who needs it, and what currently gets in the way."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: "A concrete input/output example is especially helpful."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

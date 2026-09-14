@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "duration": 12.0,
+  "segmentation": "cuts",
+  "engine": "sensory",
+  "engine_signals": {
+    "coverage": 0.0,
+    "mean_scene": 3.0,
+    "n_scenes": 4,
+    "dur": 12.0,
+    "mode": "cuts",
+    "text_frac": 1.0,
+    "setup_frac": 1.0
+  },
+  "transcript_source": "no_audio",
+  "alignment": "none",
+  "beats": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "rationale": "This shot is an animated text card showing 'FORM'.",
+      "overlay": "EKONTE / MOTION STUDY, FORM, 1 / 4",
+      "spoken": null,
+      "max_words": 6,
+      "label_source": "model",
+      "keyframe_base64": null
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 6.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "rationale": "This shot is an animated text card showing 'RHYTHM'.",
+      "overlay": "EKONTE / MOTION STUDY, RHYTHM, 2 / 4",
+      "spoken": null,
+      "max_words": 0,
+      "label_source": "model",
+      "keyframe_base64": null
+    },
+    {
+      "id": 2,
+      "start": 6.0,
+      "end": 9.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "rationale": "This shot is an animated text card showing 'HOLD'.",
+      "overlay": "EKONTE / MOTION STUDY, HOLD, 3 / 4",
+      "spoken": null,
+      "max_words": 0,
+      "label_source": "model",
+      "keyframe_base64": null
+    },
+    {
+      "id": 3,
+      "start": 9.0,
+      "end": 12.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "rationale": "This shot is an animated text card showing 'RESOLVE'.",
+      "overlay": "EKONTE / MOTION STUDY, RESOLVE, 4 / 4",
+      "spoken": null,
+      "max_words": 6,
+      "label_source": "model",
+      "keyframe_base64": null
+    }
+  ],
+  "warnings": [
+    "Engine categories are heuristics, not predictions of retention or engagement."
+  ]
+}

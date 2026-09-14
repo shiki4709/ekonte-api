@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "creator_mode": "subject",
+  "beats": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "A dark screen. Text fades in, one word at a time, building the phrase 'VIDEO TO JSON' in a clean, sans-serif font, then fades out.",
+      "line": "Turn video into structure.",
+      "overlay": "VIDEO TO JSON",
+      "sound": "A gentle, digital chime as each word appears."
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 6.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "A code editor interface appears. Four distinct JSON beat entries, each clearly structured with key-value pairs, are visible on screen. The code is static.",
+      "line": null,
+      "overlay": "JSON Beat Entries",
+      "sound": "The faint hum of a computer operating."
+    },
+    {
+      "id": 2,
+      "start": 6.0,
+      "end": 9.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "The previous code editor view transitions smoothly to show a stylized timeline. From this timeline, two distinct 'briefs' or project outlines emerge, visually represented as documents or icons branching off. These 'briefs' are static on screen.",
+      "line": null,
+      "overlay": "Timeline to Briefs",
+      "sound": "A soft 'whoosh' as the timeline appears, followed by a subtle 'click' for each brief."
+    },
+    {
+      "id": 3,
+      "start": 9.0,
+      "end": 12.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "The screen clears to black. 'OPEN SOURCE' fades in, similar to the first beat, and then fades out as 'EKONTE' appears briefly below it, then fades as well.",
+      "line": "Build your next story.",
+      "overlay": "OPEN SOURCE",
+      "sound": "A final, resonant chime as 'OPEN SOURCE' appears."
+    }
+  ],
+  "violations": [],
+  "warnings": []
+}

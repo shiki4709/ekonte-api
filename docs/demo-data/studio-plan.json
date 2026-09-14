@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "creator_mode": "subject",
+  "beats": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "A black screen with white text \"NORTH STUDIO\" appears. The text slowly expands, then contracts slightly. The phrase then smoothly transitions into the next beat.",
+      "line": "Make room for movement.",
+      "overlay": "NORTH STUDIO",
+      "sound": "A subtle, expanding synth pad fades in and holds."
+    },
+    {
+      "id": 1,
+      "start": 3.0,
+      "end": 6.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "A white square appears in the center of a black screen. It stretches horizontally, becoming a thin white line that spans the width of the screen. The line holds its position.",
+      "line": null,
+      "overlay": null,
+      "sound": "A gentle, continuous electronic hum with a slight upward inflection."
+    },
+    {
+      "id": 2,
+      "start": 6.0,
+      "end": 9.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "The thin white line from the previous beat begins to undulate, forming a smooth, repeating wave pattern across the screen. The wave moves fluidly from left to right.",
+      "line": null,
+      "overlay": null,
+      "sound": "A soft, rhythmic whoosh sound, echoing the wave's movement."
+    },
+    {
+      "id": 3,
+      "start": 9.0,
+      "end": 12.0,
+      "shot": "TEXT_CARD",
+      "angle": "UNKNOWN",
+      "function": "CONTINUITY",
+      "action": "The waving line gradually fades out as \"NORTH STUDIO\" text reappears on a black screen. The text settles in the center, bold and clear. It remains on screen.",
+      "line": "A different perspective.",
+      "overlay": "NORTH STUDIO",
+      "sound": "The synth pad from the first beat returns, holding steadily before fading out completely."
+    }
+  ],
+  "violations": [],
+  "warnings": []
+}

@@ -14,3 +14,7 @@ build/
 *.mp4
 *.mp3
 *.sqlite3*
+
+# Small, original public demo videos
+!docs/assets/reference.mp4
+!docs/assets/ekonte-demo.mp4

@@ -1,0 +1,26 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.000
+Keep the structure. Change the story.
+Reference video → reusable beats → new production plans.
+
+2
+00:00:06.000 --> 00:00:14.000
+Four three-second beats. Narration budgets: 6, 0, 0, 6.
+This is real output from an original synthetic reference.
+
+3
+00:00:14.000 --> 00:00:22.000
+One Analysis JSON, two new briefs.
+Both plans preserve the two silent middle beats.
+
+4
+00:00:22.000 --> 00:00:30.000
+An intentional edit adds speech to the second beat (ID 1, 03–06s).
+The validator catches it without an AI call.
+
+5
+00:00:30.000 --> 00:00:36.000
+Install from GitHub. Python 3.11+ and FFmpeg required.
+Offline extraction needs no API key.

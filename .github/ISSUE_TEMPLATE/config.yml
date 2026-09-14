@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Troubleshooting
+    url: https://github.com/shiki4709/ekonte-api/blob/main/docs/troubleshooting.md
+    about: Check common installation, upload, and provider issues.
+  - name: Report a security vulnerability privately
+    url: https://github.com/shiki4709/ekonte-api/security/advisories/new
+    about: Do not disclose vulnerabilities or credentials in a public issue.
